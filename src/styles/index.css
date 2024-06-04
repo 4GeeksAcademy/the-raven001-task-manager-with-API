@@ -1,12 +1,27 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.card {
+    border: 1px solid gray;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  
+  .task {
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 500px;
+  }
+  
+  p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  input {
+    width: 525px !important;
+  }
+  
+  .delete {
+    opacity: 0;
+  }
+  
+  .task:hover .delete {
+    opacity: 1;
+  }
