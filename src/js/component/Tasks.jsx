@@ -111,9 +111,7 @@ const TaskManager = () => {
     }
   }
 
-  useEffect(() => {
-    createUser().then(() => getInfo());
-  }, []);
+ 
 
   const pressEvent = (event) => {
     if (event.key === "Enter") {
@@ -126,8 +124,6 @@ const TaskManager = () => {
         is_done: false,
         id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
       };  
-
-      
 
       taskSaverToAPI(newTask).then((data) => {
         
@@ -149,6 +145,10 @@ const TaskManager = () => {
       setTasks(updatedTasks);
     })
   };
+
+  useEffect(() => {
+    createUser().then(() => getInfo());
+  }, []);
 
   return (
     <div>
